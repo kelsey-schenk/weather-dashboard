@@ -1,42 +1,51 @@
-<!-- GIVEN a weather dashboard with form inputs
-WHEN I search for a city
-THEN I am presented with current and future conditions for that city and that city is added to the search history
-WHEN I view current weather conditions for that city
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
-WHEN I view the UV index
-THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
-WHEN I view future weather conditions for that city
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
-WHEN I click on a city in the search history
-THEN I am again presented with current and future conditions for that city -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles.css">
     <title>Weather Dashboard</title>
 </head>
-
+<header>
+    <nav class="nav-container">
+        <h1 class="title">WEATHER DASHBOARD</h1>
+    </nav>
+</header>
 
 <body>
-<main>
-<h1>Weather Dashboard</h1>
-<div class="city-search">
-    <h2>Search For a City:</h2>
-        <form id="search-form" class="search-body">
-            <input name="city" id="city-name" type="text">
-            <button type="submit" class="btn">Search</button>
-        </form>
+    <div class="repos-container">
+        <div class="city-search">
+            <form class="forecast-form" id="forecast-form">
+                <h2 class="city-header">Search for a City:</h2>
+                <div class="form-content">
+                    <input type="text" id="search-input">
+                    <button onclick="getCityDetails(event)" type="submit" id="search-btn"
+                        class="search-btn">Search</button>
+                </div>
+            </form>
+            <div class="search-history">
+                <p>Search History Data</p>
+            </div>
+        </div>
+        <div class="display-weather" id="display-weather">
+            <div class="main-forecast" id="main-forecast">
+                <!-- <h2 class="cityname-header" id="cityname-header"></h2> -->
+                <!-- city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index -->
+            </div>
+            <!-- five day forecast -->
+            <div class="five-forecast" id="five-forecast">
+            </div>
+        </div>
     </div>
-<div class=previous-cities>
-
-</div>
-<div class=search-results id=results>
-    
-</div>
-</main>
-<script src="assets/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./assets/script.js"></script>
 </body>
-</html>
 
-<!-- Append City Searched for -->
+</html>
