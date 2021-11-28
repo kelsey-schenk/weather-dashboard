@@ -3,14 +3,15 @@
 * {
 margin: 0;
 padding: 0;
-font-family: "Montserrat", sans-serif;
+font-family: 'Times New Roman', Times, serif;
 }
 
 body {
 width: 100vw;
 min-height: 100vh;
 }
-/* nav */
+
+
 .nav-container {
 display: flex;
 flex-wrap: wrap;
@@ -23,23 +24,21 @@ margin-bottom: 10px;
 }
 
 
-/* repo-container */
 .repos-container {
 display: flex;
 flex-direction: row;
 }
 
-/* search bar */
 .city-search {
-background: rgba(255, 255, 255, 0.4);
+background: gold;
 margin-right: 15px;
 margin-left: 30px;
-  padding: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+padding: 15px;
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 min-width: 20%;
 }
 
@@ -47,7 +46,7 @@ min-width: 20%;
 margin-bottom: 10px;
 }
 .search-btn {
-background-color: rgb(38, 11, 65);
+background-color: turquoise;
 margin: 5px;
 padding: 5px;
 width: 100%;
@@ -64,19 +63,32 @@ justify-content: center;
 
 input[type="text"] {
 padding: 5px;
-  margin: 5px;
-  width: 100%;
-  box-sizing: border-box;
+margin: 5px;
+width: 100%;
+box-sizing: border-box;
 }
 
 /*  display city data*/
 .display-weather {
-  background: rgba(255, 255, 255, 0.4);
-  padding: 15px;
-  margin-left: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  min-width: 70%;
-  line-height: 2;
+background: teal;
+padding: 15px;
+margin-left: 15px;
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+min-width: 70%;
+line-height: 2;
+}
+
+/* uv index */
+.low {
+    background-color: green;
+}
+
+.moderate {
+    background-color: yellow;
+}
+
+.high {
+    background-color: red;
 }
